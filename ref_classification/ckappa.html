@@ -75,8 +75,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f8dc6eab18fde03278982b0b35885446.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ac8191c3450311aeea82dee7b78ef96d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a5ad0c8c17bdc5fd493e5ae0d1dd07c2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-10c783460655793c06babd88e4da8c2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f23627fd1016ab99766ed047b8ef3b5e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -553,9 +553,16 @@ A generic function for <a href="https://en.wikipedia.org/wiki/Cohen%27s_kappa">C
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">## S3 method for class 'cmatrix'</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ckappa</span>(x, <span class="at">beta =</span> <span class="dv">0</span>, ...)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ckappa</span>(...)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">weighted.ckappa</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ckappa</span>(</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a> ...,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a> <span class="at">beta =</span> <span class="dv">0</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">weighted.ckappa</span>(</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a> ...,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a> w,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a> <span class="at">beta =</span> <span class="dv">0</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="arguments" class="level3">
@@ -597,7 +604,7 @@ A <code>&lt;numeric&gt;</code> value of length 1 (default: 0). If <span class="m
 </td>
 <td>
 <p>
-Arguments passed into other methods
+micro = NULL, na.rm = TRUE Arguments passed into other methods
 </p>
 </td>
 </tr>
@@ -656,7 +663,7 @@ Where:
 </li>
 </ul>
 <p>
-If <span class="math inline">\(\beta \neq 0\)</span> the off-diagonals in the confusion matrix is benalized before <span class="math inline">\(\rho\)</span> is calculated. More formally,
+If <span class="math inline">\(\beta \neq 0\)</span> the off-diagonals in the confusion matrix is penalized before <span class="math inline">\(\rho\)</span> is calculated. More formally,
 </p>
 <p><span class="math display">\[
 \chi = X \circ Y^{\beta}
@@ -672,7 +679,7 @@ Where:
 </li>
 <li>
 <p>
-<span class="math inline">\(Y\)</span> is the penalzing matrix and
+<span class="math inline">\(Y\)</span> is the penalizing matrix and
 </p>
 </li>
 <li>
