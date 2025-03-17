@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -64,19 +64,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ref_classification/rsq.html" rel="next">
+<link href="../ref_classification/roc.auc.html" rel="next">
 <link href="../ref_classification/precision.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-86daaaaad7353f9cc0c554efc1dd6d94.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f8dc6eab18fde03278982b0b35885446.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de84f8d6bb715db06a919283c2d1e787.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-9a023c9ade86a60361e96e3e3f11bc54.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-10c783460655793c06babd88e4da8c2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-f23627fd1016ab99766ed047b8ef3b5e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3e9a65ea18222a6a59dafbb600a7b2cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-00395019c45a2971a34e544d787ddd11.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -430,6 +430,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../ref_classification/pr.auc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Area under the Precision-Recall Curve</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../ref_classification/prROC.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Precision-Recall Curve</span></a>
   </div>
@@ -448,6 +454,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../ref_classification/roc.auc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Area under the Receiver Operator Characteristics Curve</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../ref_classification/rsq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coefficient of Determination</span></a>
   </div>
@@ -462,6 +474,29 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../ref_classification/zerooneloss.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zero-One Loss</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integrating {SLmetrics} with other pkgs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integration_classification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using {lightgbm} and {SLmetrics} in classification tasks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integration_regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using {xgboost} and {SLmetrics} in regression tasks</span></a>
   </div>
 </li>
       </ul>
@@ -632,7 +667,7 @@ Sensitivity, True Positive Rate
 </td>
 <td>
 <p>
-A vector of <factor>- of length <span class="math inline">\(n\)</span>, and <span class="math inline">\(k\)</span> levels.
+A vector of <factor> values of length <span class="math inline">\(n\)</span>, and <span class="math inline">\(k\)</span> levels.
 </factor></p>
 </td>
 </tr>
@@ -642,7 +677,7 @@ A vector of <factor>- of length <span class="math inline">\(n\)</span>, and <spa
 </td>
 <td>
 <p>
-A vector of <factor>-vector of length <span class="math inline">\(n\)</span>, and <span class="math inline">\(k\)</span> levels.
+A vector of <factor> values of length <span class="math inline">\(n\)</span>, and <span class="math inline">\(k\)</span> levels.
 </factor></p>
 </td>
 </tr>
@@ -672,7 +707,7 @@ A <logical> value of length <span class="math inline">\(1\)</span> (default: TRU
 </td>
 <td>
 <p>
-micro = NULL, na.rm = TRUE Arguments passed into other methods
+Arguments passed into other methods
 </p>
 </td>
 </tr>
@@ -1375,8 +1410,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ref_classification/rsq.html" class="pagination-link" aria-label="Coefficient of Determination">
-        <span class="nav-page-text">Coefficient of Determination</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ref_classification/roc.auc.html" class="pagination-link" aria-label="Area under the Receiver Operator Characteristics Curve">
+        <span class="nav-page-text">Area under the Receiver Operator Characteristics Curve</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

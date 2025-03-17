@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,18 +65,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./garbage.html" rel="next">
-<link href="./ref_classification/zerooneloss.html" rel="prev">
+<link href="./integration_regression.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-86daaaaad7353f9cc0c554efc1dd6d94.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f8dc6eab18fde03278982b0b35885446.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de84f8d6bb715db06a919283c2d1e787.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9a023c9ade86a60361e96e3e3f11bc54.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8b3bc0799969dde090ec63a4a523a327.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-939f7ad4933fca5c35986f537e3ce3da.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-34553ff1a0714fabecb6e940da2feca9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f58a1b7577ee8ea1f5a525d2fde3b8c7.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -401,6 +401,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./ref_classification/pr.auc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Area under the Precision-Recall Curve</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./ref_classification/prROC.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Precision-Recall Curve</span></a>
   </div>
@@ -419,6 +425,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./ref_classification/roc.auc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Area under the Receiver Operator Characteristics Curve</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./ref_classification/rsq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coefficient of Determination</span></a>
   </div>
@@ -433,6 +445,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./ref_classification/zerooneloss.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zero-One Loss</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integrating {SLmetrics} with other pkgs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration_classification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using {lightgbm} and {SLmetrics} in classification tasks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integration_regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using {xgboost} and {SLmetrics} in regression tasks</span></a>
   </div>
 </li>
       </ul>
@@ -522,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>SLmetrics<span class="sc">::</span><span class="fu">openmp.threads</span>(<span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>#&gt; Using 4 threads.</code></pre>
+<pre><code>#&gt; Using 3 threads.</code></pre>
 </div>
 </div>
 </section>
@@ -532,7 +567,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>SLmetrics<span class="sc">::</span><span class="fu">openmp.threads</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 4</code></pre>
+<pre><code>#&gt; [1] 3</code></pre>
 </div>
 </div>
 </section>
@@ -566,7 +601,7 @@ Table&nbsp;4.1: Benchmark of computing a 3x3 confusion matrix with OpenMP enable
 <pre><code>#&gt; # A tibble: 1 × 4
 #&gt;   expression  execution_time memory_usage gc_calls
 #&gt;   &lt;fct&gt;             &lt;bch:tm&gt;    &lt;bch:byt&gt;    &lt;dbl&gt;
-#&gt; 1 With OpenMP         3.41ms           0B        0</code></pre>
+#&gt; 1 With OpenMP            5ms           0B        0</code></pre>
 </div>
 </div>
 </figure>
@@ -589,7 +624,7 @@ Table&nbsp;4.2: Benchmark of computing a 3x3 confusion matrix with OpenMP enable
 <pre><code>#&gt; # A tibble: 1 × 4
 #&gt;   expression     execution_time memory_usage gc_calls
 #&gt;   &lt;fct&gt;                &lt;bch:tm&gt;    &lt;bch:byt&gt;    &lt;dbl&gt;
-#&gt; 1 Wihtout OpenMP         8.53ms           0B        0</code></pre>
+#&gt; 1 Wihtout OpenMP         8.54ms           0B        0</code></pre>
 </div>
 </div>
 </figure>
@@ -1166,8 +1201,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ref_classification/zerooneloss.html" class="pagination-link" aria-label="Zero-One Loss">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Zero-One Loss</span>
+      <a href="./integration_regression.html" class="pagination-link" aria-label="Using {xgboost} and {SLmetrics} in regression tasks">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using {xgboost} and {SLmetrics} in regression tasks</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
